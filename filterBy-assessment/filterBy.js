@@ -1,7 +1,13 @@
 // define loop here:
-var loop = function(array, callback) {
-  for (var i = 0; i < array.length; i++) {
-    callback(array[i], i);
+var loop = function(collection, callback) {
+  if (Array.isArray(collection)) {
+    for (var i = 0; i < collection.length; i++) {
+      callback(collection[i], i);
+    }
+  } else if (typeof collection === 'object') {
+    for (var key in collection) {
+      callback(collection[key], key);
+    }
   }
 };
 
