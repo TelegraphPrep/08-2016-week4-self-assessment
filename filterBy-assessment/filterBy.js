@@ -1,17 +1,15 @@
-console.log('debug in the console of your index.html file');
-
 // define loop here:
 
 
 // we've written filterBy for you here:
 var filterBy = function(collection, predicate) {
-	var result = [];
-	loop(collection, function(elem) {
-		if (predicate(elem)) {
-			result.push(elem);
-		}
-	});
-	return result;
+  var result = [];
+  loop(collection, function(elem) {
+    if (predicate(elem)) {
+      result.push(elem);
+    }
+  });
+  return result;
 };
 
 // use filterBy on the `numbers collection` to return an array of odd numbers
